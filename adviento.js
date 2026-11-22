@@ -55,3 +55,88 @@ function renderSurprise(){
  if(creator)document.getElementById('creatorNote').hidden=false;
 }
 renderCalendar();renderSurprise();
+
+/* ==========================
+   SISTEMA DE MODALES
+========================== */
+
+function cerrarModal() {
+    const modal = document.querySelector(".modal-overlay");
+    if (modal) modal.remove();
+}
+
+function mostrarAviso(titulo, mensaje) {
+    cerrarModal();
+
+    const modal = document.createElement("div");
+    modal.className = "modal-overlay";
+
+    modal.innerHTML = `
+        <div class="modal-box">
+            <h2>${titulo}</h2>
+            <p>${mensaje}</p>
+
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-primary"
+                        onclick="cerrarModal()">
+                    ACEPTAR
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+}
+
+function pedirClave(titulo, mensaje, callback) {
+    cerrarModal();
+
+    const modal = document.createElement("div");
+    modal.className = "modal-overlay";
+
+    modal.innerHTML = `
+        <div class="modal-box">
+            <h2>${titulo}</h2>
+            <p>${mensaje}</p>
+
+            <input
+                type="password"
+                id="modalClave"
+                placeholder="Escribe la clave"
+                autocomplete="off"
+            >
+
+            <div id="modalError"></div>
+
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-primary"
+                        id="modalAceptar">
+                    ENTRAR
+                </button>
+
+                <button class="modal-btn modal-btn-secondary"
+                        onclick="cerrarModal()">
+                    CANCELAR
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const input = modal.querySelector("#modalClave");
+    const aceptar = modal.querySelector("#modalAceptar");
+
+    input.focus();
+
+    aceptar.onclick = () => {
+        const clave = input.value;
+
+        cerrarModal();
+        callback(clave);
+    };
+
+    input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") aceptar.click();
+    });
+}
