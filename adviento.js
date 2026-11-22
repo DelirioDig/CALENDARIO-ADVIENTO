@@ -145,11 +145,10 @@ const surprises = [
     },
     {
         day: 16,
-        title: "Primera de las que faltaban",
+        title: "<i>Primera de las que faltaban</i>",
         text: `
-            <p>Este día se cumple un mes de nuestra primera salida, amor. De la primera vez de muchas cosas. Del primer beso.</p>
-
-            <p>No está de más recordar que ese día comenzé a saber de ti y al mismo tiempo pude ver al amor a los ojos.</p>
+            <p>Este día se cumple un mes de nuestra primera salida, amor. De la primera vez de muchas cosas. Del primer beso. Del primer abrazo, de la primera plática. Ese día empezé a saber de tu compañía, desde ese día ha sido un verdadero placer y privilegio tenerte siempre a mi lado.</p>
+            <p>No está de más recordar que ese día comenzé a saber de ti y al mismo tiempo pude ver al amor a los ojos. Te amo con todos mis lunares, amorcito. Así mismo, amo tus lunares. Desde ese día he comenzado a contarlos. Voy perdiendo el número.</p>
         `,
         image: "imagenes/16-nov.jpg"
     },
@@ -189,7 +188,7 @@ const surprises = [
         day: 21,
         title: "<i>Segunda salida</i>",
         text: `
-            <p>Hoy se cumple exactamente un mes de nuestra primera salida. Del día en que caminamos en la noche, nos tomamos, nos abrazamos, compartimos tiempo y calle.</p>
+            <p>Hoy se cumple exactamente un mes de nuestra primera salida. Del día en que caminamos en la noche, nos tomamos, nos abrazamos, compartimos tiempo, lugares, besos de azúcar, el deseo en común de un golden, como tu lo expresaste. Ese día todos nos veían raro, a mí me importaba más amarnos.</p>
             <p>Hoy te pido que escuches <i>Loco (Tu forma de ser)</i>, de los Auténticos decadentes. Que a mí sí me volvió loco tu forma de ser.</p>
             <p>Aquí la foto, porque nunca estará de más recordar los inicios de esto llamado amor:</p>
             
