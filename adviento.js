@@ -14,8 +14,8 @@ const STORAGE_KEY = 'adviento2026-dias-abiertos';
 const surprises = [
     {
         day: 1,
-        title: "Día 1",
-        text: "Aquí va el texto de la primera sorpresa.",
+        title: "Deseo",
+        text: "Para comenzar con este calendario, deseo que todos los días contigo sean bonitos. Y que, los que no sean bonitos, me sigas llamando amor",
         image: "imagenes/dia-01.jpg"
     },
     {
