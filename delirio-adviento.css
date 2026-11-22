@@ -4,3 +4,115 @@
 .calendar-page{background:var(--crema);min-height:100vh;padding:30px 18px 60px}.calendar-header{text-align:center;max-width:900px;margin:0 auto 35px}.calendar-kicker{letter-spacing:.14em;font-weight:700;font-size:clamp(12px,2vw,17px);margin:0 0 14px}.calendar-header h1{font-size:clamp(35px,7vw,70px);font-weight:400;margin:0 0 12px}.calendar-intro{font-size:clamp(17px,2.8vw,24px);line-height:1.45;margin:0 auto;max-width:720px}.calendar-grid{width:min(920px,100%);margin:auto;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(7px,1.5vw,15px)}.calendar-cell{aspect-ratio:1/1;border:1px solid var(--beige);background:var(--marfil);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--terracota);cursor:pointer;transition:transform .18s,background .18s;border-radius:2px}.calendar-cell:hover{transform:translateY(-3px);background:#fffaf4}.calendar-cell .number{font-family:var(--georgia);font-size:clamp(24px,5vw,48px)}.calendar-cell .dot{width:10px;height:10px;border-radius:50%;display:block}.dot.opened{background:var(--verde)}.dot.unopened{background:var(--rojo)}.calendar-cell.opened .dot{background:var(--verde)}.calendar-cell.unopened .dot{background:var(--rojo)}.calendar-cell:focus-visible{outline:3px solid var(--terracota)}.empty-cell{aspect-ratio:1/1;visibility:hidden}.legend{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:26px auto 10px;font-size:13px;color:var(--terracota)}.legend span{display:flex;align-items:center;gap:8px}.calendar-footnote{text-align:center;font-size:13px;max-width:600px;margin:18px auto;color:var(--terracota)}.back-link{display:block;text-align:center;color:var(--terracota);text-decoration:none;font-size:13px;margin:26px auto 0}.back-link:hover{text-decoration:underline}
 .surprise-page{min-height:100vh;background:var(--crema);padding:24px 16px 55px}.surprise-content{max-width:900px;margin:0 auto;background:var(--marfil);padding:clamp(20px,5vw,55px)}.surprise-kicker{text-align:center;letter-spacing:.12em;font-size:13px;font-weight:700;margin:32px 0 12px}.surprise-content h1{text-align:center;font-weight:400;font-size:clamp(35px,7vw,65px);margin:0 0 26px}.surprise-text{font-size:clamp(17px,2.5vw,22px);line-height:1.75;white-space:pre-line;margin:0 auto 35px;max-width:740px}.image-frame{max-width:900px;margin:0 auto;position:relative;background:var(--crema);min-height:220px;display:grid;place-items:center}.image-frame img{width:100%;height:auto;display:none}.image-frame img.visible{display:block}.image-frame p{text-align:center;font-family:var(--cairo),sans-serif;padding:40px 12px;color:var(--terracota)}.image-frame small{opacity:.8}.creator-note{text-align:center;font-size:12px;letter-spacing:.05em;margin-top:22px}.bottom-link{margin-top:40px}
 @media(max-width:540px){.calendar-page{padding:24px 10px 40px}.calendar-header{margin-bottom:24px}.calendar-grid{gap:5px}.calendar-cell .number{font-size:clamp(20px,7vw,32px)}.calendar-cell{gap:5px}.calendar-cell .dot{width:8px;height:8px}.legend{gap:14px;font-size:12px}.welcome-card{min-height:88vh}.surprise-content{padding:20px 15px}.surprise-text{line-height:1.6}}
+/* ==========================
+   MODALES Y AVISOS PERSONALIZADOS
+========================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(30, 20, 15, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.modal-box {
+    background: #EFE3D3;
+    color: #A55F54;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 28px;
+    text-align: center;
+    border: 1px solid #D7BEAC;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    animation: modalEntrada 0.25s ease;
+}
+
+.modal-box h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 0 0 18px;
+}
+
+.modal-box p {
+    font-family: Cairo, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.modal-box input {
+    width: 100%;
+    box-sizing: border-box;
+    background: #F7F2E9;
+    border: 1px solid #D7BEAC;
+    padding: 13px;
+    text-align: center;
+    font-family: Cairo, sans-serif;
+    font-size: 18px;
+    color: #A55F54;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.modal-box input:focus {
+    border-color: #A55F54;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.modal-btn {
+    border: none;
+    padding: 12px 22px;
+    font-family: Cairo, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.modal-btn-primary {
+    background: #A55F54;
+    color: #F7F2E9;
+}
+
+.modal-btn-primary:hover {
+    opacity: 0.85;
+}
+
+.modal-btn-secondary {
+    background: #D7BEAC;
+    color: #A55F54;
+}
+
+.modal-btn-secondary:hover {
+    background: #c8ad98;
+}
+
+.modal-error {
+    color: #A20C0C;
+    font-family: Cairo, sans-serif;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+@keyframes modalEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
