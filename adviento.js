@@ -6,13 +6,200 @@ const RECIPIENT_KEY = '200909';
 const CREATOR_KEY = '3333';
 const STORAGE_KEY = 'adviento2026-dias-abiertos';
 
-// EDITA aquí el contenido y la ruta de imagen de cada día.
-const surprises = Array.from({ length: 31 }, (_, i) => ({
-    day: i + 1,
-    title: `Día ${i + 1}`,
-    text: `Esta sorpresa todavía está por escribirse.\n\nAquí puedes colocar el texto que corresponde al día ${i + 1}.`,
-    image: `imagenes/dia-${String(i + 1).padStart(2, '0')}.jpg`
-}));
+/* =================================
+   CONTENIDO DE LAS 31 SORPRESAS
+   EDITA TÍTULO, TEXTO E IMAGEN
+================================= */
+
+const surprises = [
+    {
+        day: 1,
+        title: "Día 1",
+        text: "Aquí va el texto de la primera sorpresa.",
+        image: "imagenes/dia-01.jpg"
+    },
+    {
+        day: 2,
+        title: "Día 2",
+        text: "Aquí va el texto de la segunda sorpresa.",
+        image: "imagenes/dia-02.jpg"
+    },
+    {
+        day: 3,
+        title: "Día 3",
+        text: "Aquí va el texto de la tercera sorpresa.",
+        image: "imagenes/dia-03.jpg"
+    },
+    {
+        day: 4,
+        title: "Día 4",
+        text: "Aquí va el texto de la cuarta sorpresa.",
+        image: "imagenes/dia-04.jpg"
+    },
+    {
+        day: 5,
+        title: "Día 5",
+        text: "Aquí va el texto de la quinta sorpresa.",
+        image: "imagenes/dia-05.jpg"
+    },
+    {
+        day: 6,
+        title: "Día 6",
+        text: "Aquí va el texto de la sexta sorpresa.",
+        image: "imagenes/dia-06.jpg"
+    },
+    {
+        day: 7,
+        title: "Día 7",
+        text: "Aquí va el texto de la séptima sorpresa.",
+        image: "imagenes/dia-07.jpg"
+    },
+    {
+        day: 8,
+        title: "Día 8",
+        text: "Aquí va el texto de la octava sorpresa.",
+        image: "imagenes/dia-08.jpg"
+    },
+    {
+        day: 9,
+        title: "Día 9",
+        text: "Aquí va el texto de la novena sorpresa.",
+        image: "imagenes/dia-09.jpg"
+    },
+    {
+        day: 10,
+        title: "Día 10",
+        text: "Aquí va el texto de la décima sorpresa.",
+        image: "imagenes/dia-10.jpg"
+    },
+    {
+        day: 11,
+        title: "Día 11",
+        text: "Aquí va el texto de la sorpresa del día 11.",
+        image: "imagenes/dia-11.jpg"
+    },
+    {
+        day: 12,
+        title: "Día 12",
+        text: "Aquí va el texto de la sorpresa del día 12.",
+        image: "imagenes/dia-12.jpg"
+    },
+    {
+        day: 13,
+        title: "Día 13",
+        text: "Aquí va el texto de la sorpresa del día 13.",
+        image: "imagenes/dia-13.jpg"
+    },
+    {
+        day: 14,
+        title: "Día 14",
+        text: "Aquí va el texto de la sorpresa del día 14.",
+        image: "imagenes/dia-14.jpg"
+    },
+    {
+        day: 15,
+        title: "Día 15",
+        text: "Aquí va el texto de la sorpresa del día 15.",
+        image: "imagenes/dia-15.jpg"
+    },
+    {
+        day: 16,
+        title: "Primera de las que faltan",
+        text: "Este día, se cumple un mes de nuestra primera salida, amor. No está de más hacerlo, ese comenzé a saber de ti y al mismo tiempo pude ver al amor a los ojos.",
+        image: "imagenes/dia-16.jpg"
+    },
+    {
+        day: 17,
+        title: "Día 17",
+        text: "Aquí va el texto de la sorpresa del día 17.",
+        image: "imagenes/dia-17.jpg"
+    },
+    {
+        day: 18,
+        title: "Día 18",
+        text: "Aquí va el texto de la sorpresa del día 18.",
+        image: "imagenes/dia-18.jpg"
+    },
+    {
+        day: 19,
+        title: "Día 19",
+        text: "Aquí va el texto de la sorpresa del día 19.",
+        image: "imagenes/dia-19.jpg"
+    },
+    {
+        day: 20,
+        title: "Día 20",
+        text: "Aquí va el texto de la sorpresa del día 20.",
+        image: "imagenes/dia-20.jpg"
+    },
+    {
+        day: 21,
+        title: "Día 21",
+        text: "Aquí va el texto de la sorpresa del día 21.",
+        image: "imagenes/dia-21.jpg"
+    },
+    {
+        day: 22,
+        title: "Día 22",
+        text: "Aquí va el texto de la sorpresa del día 22.",
+        image: "imagenes/dia-22.jpg"
+    },
+    {
+        day: 23,
+        title: "Día 23",
+        text: "Aquí va el texto de la sorpresa del día 23.",
+        image: "imagenes/dia-23.jpg"
+    },
+    {
+        day: 24,
+        title: "Día 24",
+        text: "Aquí va el texto de la sorpresa del día 24.",
+        image: "imagenes/dia-24.jpg"
+    },
+    {
+        day: 25,
+        title: "Día 25",
+        text: "Aquí va el texto de la sorpresa del día 25.",
+        image: "imagenes/dia-25.jpg"
+    },
+    {
+        day: 26,
+        title: "Día 26",
+        text: "Aquí va el texto de la sorpresa del día 26.",
+        image: "imagenes/dia-26.jpg"
+    },
+    {
+        day: 27,
+        title: "Día 27",
+        text: "Aquí va el texto de la sorpresa del día 27.",
+        image: "imagenes/dia-27.jpg"
+    },
+    {
+        day: 28,
+        title: "Día 28",
+        text: "Aquí va el texto de la sorpresa del día 28.",
+        image: "imagenes/dia-28.jpg"
+    },
+    {
+        day: 29,
+        title: "Día 29",
+        text: "Aquí va el texto de la sorpresa del día 29.",
+        image: "imagenes/dia-29.jpg"
+    },
+    {
+        day: 30,
+        title: "Día 30",
+        text: "Aquí va el texto de la sorpresa del día 30.",
+        image: "imagenes/dia-30.jpg"
+    },
+    {
+        day: 31,
+        title: "Día 31",
+        text: "Aquí va el texto de la sorpresa del día 31.",
+        image: "imagenes/dia-31.jpg"
+    }
+];
+
 
 /* ==========================
    FECHA DE MÉXICO
@@ -44,6 +231,7 @@ function dayIsAvailable(day) {
     );
 }
 
+
 /* ==========================
    REGISTRO DE DÍAS ABIERTOS
 ========================== */
@@ -64,6 +252,7 @@ function saveOpened(day) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(days));
     }
 }
+
 
 /* ==========================
    SISTEMA DE MODALES
@@ -115,7 +304,6 @@ function mostrarAviso(titulo, mensaje, alCerrar = null) {
         }
     };
 
-    // Cerrar con Escape
     modal.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
             cerrarModal();
@@ -194,7 +382,6 @@ function pedirClave(titulo, mensaje, callback) {
     }
 
     aceptar.onclick = comprobarClave;
-
     cancelar.onclick = cerrarModal;
 
     input.addEventListener('keydown', e => {
@@ -203,6 +390,7 @@ function pedirClave(titulo, mensaje, callback) {
         }
     });
 }
+
 
 /* ==========================
    APERTURA DE DÍAS
@@ -214,13 +402,11 @@ function openDay(day) {
         'Escribe la clave para descubrir tu sorpresa.',
         function (password) {
 
-            // ACCESO DEL CREADOR
             if (password === CREATOR_KEY) {
                 location.href = `sorpresa.html?dia=${day}&creador=1`;
                 return;
             }
 
-            // CLAVE INCORRECTA
             if (password !== RECIPIENT_KEY) {
                 mostrarAviso(
                     'CLAVE INCORRECTA',
@@ -229,7 +415,6 @@ function openDay(day) {
                 return;
             }
 
-            // DÍA AÚN NO DISPONIBLE
             if (!dayIsAvailable(day)) {
                 mostrarAviso(
                     '¡UPS!',
@@ -238,13 +423,13 @@ function openDay(day) {
                 return;
             }
 
-            // DÍA DISPONIBLE PARA EL DESTINATARIO
             saveOpened(day);
 
             location.href = `sorpresa.html?dia=${day}`;
         }
     );
 }
+
 
 /* ==========================
    MOSTRAR CALENDARIO
@@ -255,20 +440,16 @@ function renderCalendar() {
 
     if (!grid) return;
 
-    // El 1 de diciembre de 2026 cae en martes.
-    // La cuadrícula comienza visualmente en lunes.
     const offset = (
         new Date(Date.UTC(2026, 11, 1)).getUTCDay() + 6
     ) % 7;
 
-    // Espacios vacíos antes del día 1
     for (let i = 0; i < offset; i++) {
         const blank = document.createElement('div');
         blank.className = 'empty-cell';
         grid.appendChild(blank);
     }
 
-    // Crear los 31 días
     for (let day = 1; day <= 31; day++) {
         const opened = openedDays().includes(day);
 
@@ -299,6 +480,7 @@ function renderCalendar() {
     }
 }
 
+
 /* ==========================
    MOSTRAR SORPRESA
 ========================== */
@@ -313,7 +495,6 @@ function renderSurprise() {
     const day = Number(params.get('dia'));
     const creator = params.get('creador') === '1';
 
-    // Verificar número del día
     if (!day || day < 1 || day > 31) {
         document.getElementById('surpriseTitle').textContent =
             'No se encontró este día';
@@ -321,8 +502,6 @@ function renderSurprise() {
         return;
     }
 
-    // Bloquear acceso directo a días futuros,
-    // excepto cuando se utiliza la vista previa del creador.
     if (!creator && !dayIsAvailable(day)) {
         mostrarAviso(
             '¡UPS!',
@@ -363,11 +542,11 @@ function renderSurprise() {
         };
     }
 
-    // Aviso de vista previa del creador
     if (creator) {
         document.getElementById('creatorNote').hidden = false;
     }
 }
+
 
 /* ==========================
    INICIALIZAR
