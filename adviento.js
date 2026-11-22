@@ -9,193 +9,271 @@ const STORAGE_KEY = 'adviento2026-dias-abiertos';
 /* =================================
    CONTENIDO DE LAS 31 SORPRESAS
    EDITA TÍTULO, TEXTO E IMAGEN
+
+   TÍTULO Y TEXTO ADMITEN HTML:
+   <p>, <br>, <i>, <b>, <u>, etc.
 ================================= */
 
 const surprises = [
     {
         day: 1,
-        title: "Deseo",
-        text: "Para comenzar con este calendario, deseo que todos los días contigo sean bonitos. Y que, los que no sean bonitos, me sigas llamando amor",
+        title: "<i>Deseo</i>",
+        text: `
+            <p>Para comenzar con este calendario, <b>deseo que todos los días contigo sean bonitos</b>. Y que, los días que no sean los mejores, <i>me sigas llamando amor</i>.</p>
+            <p>Doy por iniciado este calendario de adviento pidiéndote que leas el poema <i>Te quiero</i>, de Mario Benedetti. En especial, te dedico el siguiente fragmento:</p>
+            <p>
+            <i>Si te quiero es porque sos<br>
+            <i>mi amor mi cómplice y todo</i><br>
+            <i>y en la calle codo a codo</i><br>
+            <i>somos mucho más que dos.</i>
+            </p>
+
+        `,
         image: "imagenes/dia-01.jpg"
     },
     {
         day: 2,
         title: "Día 2",
-        text: "Aquí va el texto de la segunda sorpresa.",
+        text: `
+            <p>Aquí va el texto de la segunda sorpresa.</p>
+        `,
         image: "imagenes/dia-02.jpg"
     },
     {
         day: 3,
         title: "Día 3",
-        text: "Aquí va el texto de la tercera sorpresa.",
+        text: `
+            <p>Aquí va el texto de la tercera sorpresa.</p>
+        `,
         image: "imagenes/dia-03.jpg"
     },
     {
         day: 4,
         title: "Día 4",
-        text: "Aquí va el texto de la cuarta sorpresa.",
+        text: `
+            <p>Aquí va el texto de la cuarta sorpresa.</p>
+        `,
         image: "imagenes/dia-04.jpg"
     },
     {
         day: 5,
         title: "Día 5",
-        text: "Aquí va el texto de la quinta sorpresa.",
+        text: `
+            <p>Aquí va el texto de la quinta sorpresa.</p>
+        `,
         image: "imagenes/dia-05.jpg"
-    },
+        },
     {
         day: 6,
         title: "Día 6",
-        text: "Aquí va el texto de la sexta sorpresa.",
+        text: `
+            <p>Aquí va el texto de la sexta sorpresa.</p>
+        `,
         image: "imagenes/dia-06.jpg"
     },
     {
         day: 7,
         title: "Día 7",
-        text: "Aquí va el texto de la séptima sorpresa.",
+        text: `
+            <p>Aquí va el texto de la séptima sorpresa.</p>
+        `,
         image: "imagenes/dia-07.jpg"
     },
     {
         day: 8,
         title: "Día 8",
-        text: "Aquí va el texto de la octava sorpresa.",
+        text: `
+            <p>Aquí va el texto de la octava sorpresa.</p>
+        `,
         image: "imagenes/dia-08.jpg"
     },
     {
         day: 9,
         title: "Día 9",
-        text: "Aquí va el texto de la novena sorpresa.",
+        text: `
+            <p>Aquí va el texto de la novena sorpresa.</p>
+        `,
         image: "imagenes/dia-09.jpg"
     },
     {
         day: 10,
         title: "Día 10",
-        text: "Aquí va el texto de la décima sorpresa.",
+        text: `
+            <p>Aquí va el texto de la décima sorpresa.</p>
+        `,
         image: "imagenes/dia-10.jpg"
     },
     {
         day: 11,
         title: "Día 11",
-        text: "Aquí va el texto de la sorpresa del día 11.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 11.</p>
+        `,
         image: "imagenes/dia-11.jpg"
     },
     {
         day: 12,
         title: "Día 12",
-        text: "Aquí va el texto de la sorpresa del día 12.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 12.</p>
+        `,
         image: "imagenes/dia-12.jpg"
     },
     {
         day: 13,
         title: "Día 13",
-        text: "Aquí va el texto de la sorpresa del día 13.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 13.</p>
+        `,
         image: "imagenes/dia-13.jpg"
     },
     {
         day: 14,
         title: "Día 14",
-        text: "Aquí va el texto de la sorpresa del día 14.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 14.</p>
+        `,
         image: "imagenes/dia-14.jpg"
     },
     {
         day: 15,
         title: "Día 15",
-        text: "Aquí va el texto de la sorpresa del día 15.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 15.</p>
+        `,
         image: "imagenes/dia-15.jpg"
     },
     {
         day: 16,
-        title: "Primera de las que faltan",
-        text: "Este día, se cumple un mes de nuestra primera salida, amor. No está de más hacerlo, ese comenzé a saber de ti y al mismo tiempo pude ver al amor a los ojos.",
-        image: "imagenes/dia-16.jpg"
+        title: "Primera de las que faltaban",
+        text: `
+            <p>Este día se cumple un mes de nuestra primera salida, amor. De la primera vez de muchas cosas. Del primer beso.</p>
+
+            <p>No está de más recordar que ese día comenzé a saber de ti y al mismo tiempo pude ver al amor a los ojos.</p>
+        `,
+        image: "imagenes/16-nov.jpg"
     },
     {
         day: 17,
         title: "Día 17",
-        text: "Aquí va el texto de la sorpresa del día 17.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 17.</p>
+        `,
         image: "imagenes/dia-17.jpg"
     },
     {
         day: 18,
         title: "Día 18",
-        text: "Aquí va el texto de la sorpresa del día 18.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 18.</p>
+        `,
         image: "imagenes/dia-18.jpg"
     },
     {
         day: 19,
         title: "Día 19",
-        text: "Aquí va el texto de la sorpresa del día 19.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 19.</p>
+        `,
         image: "imagenes/dia-19.jpg"
     },
     {
         day: 20,
         title: "Día 20",
-        text: "Aquí va el texto de la sorpresa del día 20.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 20.</p>
+        `,
         image: "imagenes/dia-20.jpg"
     },
     {
         day: 21,
-        title: "Día 21",
-        text: "Aquí va el texto de la sorpresa del día 21.",
-        image: "imagenes/dia-21.jpg"
+        title: "<i>Segunda salida</i>",
+        text: `
+            <p>Hoy se cumple exactamente un mes de nuestra primera salida. Del día en que caminamos en la noche, nos tomamos, nos abrazamos, compartimos tiempo y calle.</p>
+            <p>Hoy te pido que escuches <i>Loco (Tu forma de ser)</i>, de los Auténticos decadentes. Que a mí sí me volvió loco tu forma de ser.</p>
+            <p>Aquí la foto, porque nunca estará de más recordar los inicios de esto llamado amor:</p>
+            
+        `,
+        image: "imagenes/21-nov.jpg"
     },
     {
         day: 22,
         title: "Día 22",
-        text: "Aquí va el texto de la sorpresa del día 22.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 22.</p>
+        `,
         image: "imagenes/dia-22.jpg"
     },
     {
         day: 23,
         title: "Día 23",
-        text: "Aquí va el texto de la sorpresa del día 23.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 23.</p>
+        `,
         image: "imagenes/dia-23.jpg"
     },
     {
         day: 24,
         title: "Día 24",
-        text: "Aquí va el texto de la sorpresa del día 24.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 24.</p>
+        `,
         image: "imagenes/dia-24.jpg"
     },
     {
         day: 25,
         title: "Día 25",
-        text: "Aquí va el texto de la sorpresa del día 25.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 25.</p>
+        `,
         image: "imagenes/dia-25.jpg"
     },
     {
         day: 26,
         title: "Día 26",
-        text: "Aquí va el texto de la sorpresa del día 26.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 26.</p>
+        `,
         image: "imagenes/dia-26.jpg"
     },
     {
         day: 27,
         title: "Día 27",
-        text: "Aquí va el texto de la sorpresa del día 27.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 27.</p>
+        `,
         image: "imagenes/dia-27.jpg"
     },
     {
         day: 28,
         title: "Día 28",
-        text: "Aquí va el texto de la sorpresa del día 28.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 28.</p>
+        `,
         image: "imagenes/dia-28.jpg"
     },
     {
         day: 29,
         title: "Día 29",
-        text: "Aquí va el texto de la sorpresa del día 29.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 29.</p>
+        `,
         image: "imagenes/dia-29.jpg"
     },
     {
         day: 30,
         title: "Día 30",
-        text: "Aquí va el texto de la sorpresa del día 30.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 30.</p>
+        `,
         image: "imagenes/dia-30.jpg"
     },
     {
         day: 31,
         title: "Día 31",
-        text: "Aquí va el texto de la sorpresa del día 31.",
+        text: `
+            <p>Aquí va el texto de la sorpresa del día 31.</p>
+        `,
         image: "imagenes/dia-31.jpg"
     }
 ];
@@ -519,10 +597,12 @@ function renderSurprise() {
     document.getElementById('surpriseKicker').textContent =
         `DICIEMBRE 2026 · DÍA ${day}`;
 
-    document.getElementById('surpriseTitle').textContent =
+    /* AHORA EL TÍTULO ADMITE HTML */
+    document.getElementById('surpriseTitle').innerHTML =
         entry.title;
 
-    document.getElementById('surpriseText').textContent =
+    /* AHORA EL TEXTO ADMITE HTML */
+    document.getElementById('surpriseText').innerHTML =
         entry.text;
 
     const img = document.getElementById('surpriseImage');
